@@ -1,5 +1,6 @@
-declare module 'sentinel-js' {
-  export function on<T = HTMLElement>(cssSelectors: string | string[], callback: (el: T) => void): void
-  export function off<T = HTMLElement>(event: string | string[], callback?: (el: T) => void): void
-  export function reset(): void
+export default sentinel;
+declare namespace sentinel {
+    function on(cssSelectors: string | string[], callback: (arg0: HTMLElement) => void): void;
+    function off(cssSelectors: string | string[], callback?: (arg0: HTMLElement) => void): void;
+    function reset(): void;
 }
